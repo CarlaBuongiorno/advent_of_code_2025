@@ -17,37 +17,57 @@ def test_right_one_():
     assert get_password(['R5']) == 0
 
 
-def test_left_50():
-    assert get_password(['L50']) == 1
+# def test_left_50():
+#     assert get_password(['L50']) == 1
 
 
-def test_right_50():
-    assert get_password(['R50']) == 1
+# def test_right_50():
+#     assert get_password(['R50']) == 1
 
 
-def test_right_51():
-    assert get_password(['R51']) == 0
+# def test_right_51():
+#     assert get_password(['R51']) == 0
 
 
-def test_right_150():
-    assert get_password(['R150']) == 1
+# def test_right_150():
+#     assert get_password(['R150']) == 1
 
 
-def test_right_250():
-    assert get_password(['R250']) == 1
+# def test_right_250():
+#     assert get_password(['R250']) == 1
 
 
-def test_right_200():
-    assert get_password(['R200']) == 0
+# def test_right_200():
+#     assert get_password(['R200']) == 0
 
 
-def test_two_rotations_right():
-    assert get_password(['R50', 'R50']) == 1
+# def test_two_rotations_right():
+#     assert get_password(['R50', 'R50']) == 1
 
 
-def test_two_rotations_left():
-    assert get_password(['L50', 'L50']) == 1
+# def test_two_rotations_left():
+#     assert get_password(['L50', 'L50']) == 1
 
 
-def test_three_rotations():
-    assert get_password(['R50', 'R100', 'L4']) == 2
+# def test_three_rotations():
+#     assert get_password(['R50', 'R100', 'L4']) == 2
+
+
+def test_one_zero():
+    assert get_password(['L2', 'L3','R55']) == 1
+
+
+def test_two_zeros():
+    assert get_password(['R50', 'R101']) == 2
+
+
+def test_another_two_zeros():
+    assert get_password(['L68', 'L30','R48']) == 2
+    
+
+def test_three_zeros():
+    assert get_password(['L68', 'L30','R48',
+                         'L5', 'R60', 'L55',
+                         'L1', 'L99', 'R14',
+                         'L82']) == 6
+    

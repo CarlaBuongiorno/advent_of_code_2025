@@ -9,7 +9,7 @@ def get_password(sequence_of_rotations):
             rotation_list.append(dial[start])
             if len(rotation_list) == (abs(number_to_add) + 1):
                 start = rotation_list[-1]
-                result.append(rotation_list[-1])
+                result.extend(rotation_list[1:])
                 rotation_list.clear()
                 break
             if number_to_add > 0:
