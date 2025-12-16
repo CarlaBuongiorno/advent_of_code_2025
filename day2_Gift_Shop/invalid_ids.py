@@ -14,8 +14,11 @@ def get_all_ids(id_range):
     return [str(id) for id in range(id_range[0], id_range[1]+1)]
 
 
-def check_for_invalid(id): # '565656'
-    if len(id) % 2 == 0:
-        part1 = id[:int(len(id)/2)]
-        part2 = id[int(len(id)/2):]
-        return part1 == part2
+def check_for_invalid(id):
+    # Part one solution
+    # if len(id) % 2 == 0:
+        # part1 = id[:int(len(id)/2)]
+        # part2 = id[int(len(id)/2):]
+        # return part1 == part2
+    # Part two solution
+    return id in (id + id)[1:-1]
